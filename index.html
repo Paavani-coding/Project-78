@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>My Family Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: aqua; text-align: center; border: black 5px solid;">
+    <h1 style="font-family: 'Concert One'; font-style: italic;">My Family Book</h1>
+    <img id="image_member" style="width: 250px; height: 250px;" src="https://www.pngkit.com/png/detail/0-467_nuclear-family-clip-art-illustration-extended-family-que.png">
+    <h3 id="name_member" style="font-family: 'Concert One';font-style: italic;">Family Book</h3>
+    <button onclick="update()" style="font-family: 'Concert One';font-style: italic; background-color: aquamarine;">Next</button>
+    <script>
+        var image = ["https://www.pngkit.com/png/detail/0-467_nuclear-family-clip-art-illustration-extended-family-que.png", "https://www.clipartmax.com/png/small/105-1058631_2-clip-art-pictures-of-a-mother-only.png",
+            "https://lh3.googleusercontent.com/proxy/OdkznCop_Dfm1zuJ-07fVyX_BqYNxu_OBQkOE70fVvKQoHB1UjVgJOyGtffjZTRaLprhEjlKqCdCQVhNP8dZWMrW",
+            "https://lh3.googleusercontent.com/proxy/2IVWxJDJGovKBkx_blduc0E-hP8WxRHNptEwQxq0vDDc_wg5LSU5bmVmeBYS8Dl5654bqV7e0DavLJinQpDT7bmT",
+            "https://i.pinimg.com/originals/b4/9f/62/b49f622fd467f7053c16b0fab00da64c.jpg"
+        ];
+
+        var name = ["Family Book", "Meetu Khattar(Mother)", "Pankaj Khattar(Father)", "Piyush Khattar(Brother)", "Paavani Khattar(me)"];
+
+        var i = 0;
+
+        function update() {
+            if (i > 4) {
+                i = 0;
+            }
+            document.getElementById("name_member").innerHTML = name[i];
+            document.getElementById("image_member").src = image[i];
+            i++;
+        }
+    </script>
+</body>
+
+</html>
